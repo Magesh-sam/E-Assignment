@@ -1,0 +1,29 @@
+{% extends 'assignment/main.html' %} {% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <h3 class="mb-3">Enter Assignment Details</h3>
+        <table class="table table-borderless table-responsive ">
+
+            {% for field in formset %}
+            <tr>
+                <td>{{field}}</td>
+            </tr>{% endfor %}
+        </table>
+        <br>
+        <button class="mt-3 btn btn-primary">Submit Assignment</button>
+    </form>
+    <script>
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder = 'Staff Name';
+        form_fields[2].placeholder = 'Assignment Name';
+        form_fields[3].placeholder = 'Register Number';
+        form_fields[4].required
+
+
+
+        for (var field in form_fields) {
+            form_fields[field].className += ' form-control'
+        }
+    </script>
+</div> {% endblock %}

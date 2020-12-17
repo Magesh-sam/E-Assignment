@@ -1,0 +1,47 @@
+{% extends 'assignment/main.html' %} {% block content %}
+<div class="container">
+    <h3 class="mb-3 mt-3" style="text-decoration: underline; font-weight: bold;">Assignments</h3>
+
+    <table class="table  table-hover ">
+        <thead>
+            <tr>
+                <th>Staff Name</th>
+                <th>Assignment Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignments %}
+            <tr>
+                <td>{{assignment.staffname}}</td>
+                <td>{{assignment.name}}</td>
+                <td>{{assignment.desc}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3 class="mb-3 mt-3" style="text-decoration: underline; font-weight: bold;">Submitted Assignments</h3>
+
+    <table class="table  table-hover ">
+        <thead>
+            <tr>
+                <th>Staff Name</th>
+                <th>Assignment Name</th>
+                <th>Register Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for answer in answers %}
+            <tr>
+                <td>{{answer.staffname}}</td>
+                <td>{{answer.assignmentname}}</td>
+                <td>{{answer.regno}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-block btn-info" href="{% url 'submitanswer' %}">Submit Assignment</a>
+</div> {% endblock %}

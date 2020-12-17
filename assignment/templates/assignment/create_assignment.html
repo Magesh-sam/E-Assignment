@@ -1,0 +1,28 @@
+{% extends 'assignment/main.html' %} {% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3 class="mb-3">Enter Assignment Details</h3>
+    <table class="table table-borderless table-responsive ">
+
+        {% for field in form %}
+        <tr>
+            <td>{{field}}</td>
+        </tr>{% endfor %}
+    </table>
+    <br>
+    <button class="mt-3 btn btn-primary">Create Assignment</button>
+</form>
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Staff Name';
+    form_fields[2].placeholder = 'Assignment Name';
+    form_fields[3].placeholder = 'Description';
+
+
+
+    for (var field in form_fields) {
+        form_fields[field].className += ' form-control'
+    }
+</script>
+{% endblock %}
