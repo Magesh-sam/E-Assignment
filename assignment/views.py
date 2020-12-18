@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 
 # Create your views here.
-from .forms import CreateUserForm, AssignmentForm, SubmitAssignment
+from .forms import CreateUserForm, AssignmentForm, DocumentForm
 from .models import *
 from .decorators import unauthenticated_user, allowed_users
 
@@ -62,8 +62,8 @@ def logoutUser(request):
 @allowed_users(allowed_roles=['student'])
 def home(request):
     assignments = Assignment.objects.all()
-    answers = Answer.objects.all()
-    context = {'assignments': assignments, 'answers': answers}
+    documents = Document.objects.all()
+    context = {'assignments': assignments, 'documents': documents}
     return render(request, 'assignment/dashboard.html', context)
 
 
@@ -76,7 +76,8 @@ def about(request):
 @allowed_users(allowed_roles=['admin'])
 def faculty(request):
     assignments = Assignment.objects.all()
-    context = {'assignments': assignments}
+    documents = Document.objects.all()
+    context = {'assignments': assignments, 'documents': documents, }
     if User.is_superuser:
         return render(request, 'assignment/faculty.html', context)
     else:
@@ -121,12 +122,17 @@ def deleteassignment(request, pk):
     return render(request, 'assignment/delete.html', context)
 
 
-def submitanswer(request):
-    formset = SubmitAssignment()
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['student'])
+def model_form_upload(request):
     if request.method == 'POST':
-        formset = SubmitAssignment(request.POST, request.FILES)
-        if formset.is_valid():
-            formset.save()
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
             return redirect('home')
-    context = {'formset': formset}
-    return render(request, 'assignment/submit.html', context)
+
+    else:
+        form = DocumentForm()
+    return render(request, 'assignment/simple_upload.html', {
+        'form': form
+    })

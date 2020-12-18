@@ -1,0 +1,28 @@
+{% extends 'assignment/main.html' %} {% load static %} {% block content %}
+<style>
+    #messages {
+        background-color: grey;
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+    }
+</style>
+<br>
+<h3 class=" mb-3">Enter Assignment Details</h3>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <p style="font-size: 20px;">
+        Note: upload the document in the following Name Standard <b class="ml-3">(REG NO-ASSIGNMENT NAME-STAFF NAME)</b><b class="ml-3">(Ex:AC16UCS069-CPP-SAM.pdf)</b>
+    </p>
+    <br>
+    <a href="{% url 'home' %}"></a> <button class="btn btn-primary" type="submit">Submit Assignment</button>
+    <!-- <button class="btn btn-danger" type="reset">Reset</button> -->
+    <br>
+
+</form>
+{% for message in messages %}
+<p id="messages">{{message}}</p>
+{% endfor %}
+<!-- <p><a href="{% url 'home' %}">Return to home</a></p> -->
+{% endblock %}

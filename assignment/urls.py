@@ -19,7 +19,9 @@ urlpatterns = [
     path('deleteassignment/<str:pk>/',
          views.deleteassignment, name="deleteassignment"),
 
-    path('submitanswer', views.submitanswer, name="submitanswer"),
+
+
+    path('submitform', views.model_form_upload, name="submitform"),
 
 ]
 if settings.DEBUG:

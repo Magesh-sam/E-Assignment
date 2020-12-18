@@ -20,3 +20,14 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.regno
+
+
+class Document(models.Model):
+    staffname = models.CharField(max_length=255, blank=True)
+    assignmentname = models.CharField(max_length=255, blank=True)
+    regno = models.CharField(max_length=255, blank=True)
+    document = models.FileField(upload_to='documents/%Y/%m/%d/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.regno

@@ -1,6 +1,10 @@
 {% extends 'assignment/main.html' %} {% block content %}
 <div class="container">
-    <h3 class="mb-3 mt-3" style="text-decoration: underline; font-weight: bold;">Assignments</h3>
+    <h3 class="mb-3 mt-3" style="text-decoration: underline; font-weight: bold;">Submit Assignment</h3>
+    <br>
+    <a class="btn btn-block btn-primary mb-3" href="{% url 'submitform' %}">Submit Assignment Here!</a>
+    <br>
+    <h3 class="mb-3 mt-3" style="text-decoration: underline; font-weight: bold;">Alloted Assignments</h3>
 
     <table class="table  table-hover ">
         <thead>
@@ -29,19 +33,22 @@
                 <th>Staff Name</th>
                 <th>Assignment Name</th>
                 <th>Register Number</th>
+                <th>Submitted File Name</th>
+
             </tr>
         </thead>
         <tbody>
-            {% for answer in answers %}
+            {% for document in documents %}
             <tr>
-                <td>{{answer.staffname}}</td>
-                <td>{{answer.assignmentname}}</td>
-                <td>{{answer.regno}}</td>
+                <td>{{document.staffname}}</td>
+                <td>{{document.assignmentname}}</td>
+                <td>{{document.regno}}</td>
+                <td>{{document.document}}</td>
 
             </tr>
             {% endfor %}
         </tbody>
     </table>
 
-    <a class="btn btn-block btn-info" href="{% url 'submitanswer' %}">Submit Assignment</a>
+
 </div> {% endblock %}

@@ -20,4 +20,10 @@ class AssignmentForm(ModelForm):
 class SubmitAssignment(ModelForm):
     class Meta:
         model = Answer
-        fields = ['staffname', 'assignmentname', 'regno', 'answer']
+        fields = ('staffname', 'assignmentname', 'regno', 'answer',)
+
+
+class DocumentForm(forms.ModelForm):
+    class Meta:
+        model = Document
+        fields = ('staffname', 'assignmentname', 'regno', 'document',)

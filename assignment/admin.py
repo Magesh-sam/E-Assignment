@@ -5,4 +5,5 @@ from .models import *
 
 
 admin.site.register(Assignment)
-admin.site.register(Answer)
+
+admin.site.register(Document)
