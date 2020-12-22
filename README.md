@@ -17,12 +17,12 @@ python manage.py runserver
 
 <p>Register and login using the credentials.</p>
 <p>Faculty can create new assignments.</p>
-<p>>Students can submit assignments using different page.</p>
+<p>Students can submit assignments using different page.</p>
 <p>Staff cannot submit student's assignments.</p>
 <p>Student cannot create assignments.</p>
 
 Admin permissions can be created using following command:
-python manage.py createsuperuser
+$ python manage.py createsuperuser
 "username"
 "mailid"
 "password"
