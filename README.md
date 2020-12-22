@@ -4,14 +4,20 @@ Online Assignment Application for Student and Faculty
 #under-construction
 
 1. Download Requirements using the following command:
+   '''
    pip install -r requirements.txt
-
-2.Make Migrations using the following command:
-python manage.py makemigrationss
-python manage.py migrate
-
-3.Run the Application using followind command:
-python manage.py runserver
+   '''
+   2.Make Migrations using the following command:
+   '''
+   python manage.py makemigrationss
+   '''
+   '''
+   python manage.py migrate
+   '''
+   3.Run the Application using followind command:
+   '''
+   python manage.py runserver
+   '''
 
 # About Application:
 
@@ -22,7 +28,9 @@ python manage.py runserver
 <p>Student cannot create assignments.</p>
 
 Admin permissions can be created using following command:
-$ python manage.py createsuperuser
+'''
+python manage.py createsuperuser
+'''
 "username"
 "mailid"
 "password"
