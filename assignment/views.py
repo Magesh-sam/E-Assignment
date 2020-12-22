@@ -22,9 +22,6 @@ def registerpage(request):
             form.save()
             user = form.cleaned_data.get('username')
 
-            group = Group.objects.get(name='student')
-            user.groups.add(group)
-
             messages.success(request, 'Account was created for ' + user)
             return redirect('login')
     context = {'form': form}
