@@ -53,7 +53,7 @@ Once the Admin created we can view Admin page using the following url:
 
 - Enter your mail id and password in settings.py (Not the secured way and Not recommended)
 
-```
+```python
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
