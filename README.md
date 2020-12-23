@@ -58,8 +58,23 @@ Once the Admin created we can view Admin page using the following url:
 ### Login Page
 
 <img src="Screenshots/loginpage.jpg">
+
+### Student Home Page
+
 <img src="Screenshots/studentpage1.jpg">
+
+### Student ASsignment Submission Page
+
 <img src="Screenshots/studentpage2.jpg">
+
+### Faculty Home Page
+
 <img src="Screenshots/facultypage1.jpg">
+
+### Faculty Assignment Creation and Update Page
+
 <img src="Screenshots/facultypage2.jpg">
+
+### Faculty Assignment Delete Page
+
 <img src="Screenshots/facultypage3.jpg">
