@@ -8,7 +8,7 @@ Online Assignment Application for Student and Faculty
 pip install -r requirements.txt
 ```
 
-2.Make Migrations using the following command:
+# 2.Make Migrations using the following command:
 
 ```
 python manage.py makemigrations
@@ -17,7 +17,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-3.Run the Application using followind command:
+# 3.Run the Application using followind command:
 
 ```
 python manage.py runserver
