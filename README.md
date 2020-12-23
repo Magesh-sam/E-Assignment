@@ -42,5 +42,6 @@ python manage.py createsuperuser
 "mailid"
 "password"
 </b>
+<br>
 Once the Admin created we can view Admin page using the following url:
 127.0.0.1:8000/admin
