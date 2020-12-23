@@ -62,7 +62,7 @@ EMAIL_HOST_USER = 'Enter your mail id'
 EMAIL_HOST_PASSWORD = 'Enter your mail password'
 ```
 
-- Allow low secure app in your gmail (Not secured way and Not recommended)
+- Allow low secure app in your gmail (Not the secured way and Not recommended)
 
 ## Screenshots
 
