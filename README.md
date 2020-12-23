@@ -27,6 +27,14 @@ python manage.py runserver
 
 ```
 python manage.py createsuperuser
+<b>
+"username"
+<br></br>
+"mailid"
+<br></br>
+"password"
+</b>
+<br></br>
 ```
 
 Once the Admin created we can view Admin page using the following url:
@@ -39,15 +47,16 @@ Once the Admin created we can view Admin page using the following url:
 - <p>Students can submit assignments using different page.</p>
 - <p>Staff cannot submit student's assignments and Student cannot create assignments.</p>
 - <p>You can Reset your password if you forget it</p>
+  In order to reset the password follow the steps:
 
-<b>
-"username"
-<br></br>
-"mailid"
-<br></br>
-"password"
-</b>
-<br></br>
+```
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'Enter your mail id'
+EMAIL_HOST_PASSWORD = 'your password'
+```
 
 ## Screenshots
 
