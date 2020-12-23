@@ -27,14 +27,15 @@ python manage.py runserver
 
 ```
 python manage.py createsuperuser
-<b>
-"username"
-<br></br>
-"mailid"
-<br></br>
-"password"
-</b>
-<br></br>
+
+username
+
+mailid
+
+password
+
+re-enter password
+
 ```
 
 Once the Admin created we can view Admin page using the following url:
