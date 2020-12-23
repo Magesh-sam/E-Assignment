@@ -47,7 +47,10 @@ Once the Admin created we can view Admin page using the following url:
 - <p>Students can submit assignments using different page.</p>
 - <p>Staff cannot submit student's assignments and Student cannot create assignments.</p>
 - <p>You can Reset your password if you forget it</p>
-  In order to reset the password follow the steps:
+
+### In order to reset the password follow the steps:
+
+- Enter your mail id and password in settings.py (Not the secured way and Not recommended)
 
 ```
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -55,8 +58,10 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'Enter your mail id'
-EMAIL_HOST_PASSWORD = 'your password'
+EMAIL_HOST_PASSWORD = 'Enter your mail password'
 ```
+
+- Allow low secure app in your gmail (Not secured way and Not recommended)
 
 ## Screenshots
 
