@@ -37,9 +37,10 @@ Admin permissions can be created using following command:
 python manage.py createsuperuser
 ```
 
+<b>
 "username"
 "mailid"
 "password"
-
+</b>
 Once the Admin created we can view Admin page using the following url:
 127.0.0.1:8000/admin
